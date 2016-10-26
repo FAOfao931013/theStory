@@ -1,0 +1,78 @@
+@import '../../less/global.less';
+.story-second {
+    position: relative;
+    .dialog-wrap {
+        height: 100%;
+        background-image: url('../../img/kingdom.jpg');
+        background-size: 100% 100%;
+        &.street {
+            background-image: url('../../img/street.jpg');
+            &.palace {
+                background-image: url('../../img/palace.jpg');
+                &.black {
+                    background: black;
+                }
+            }
+        }
+    }
+    .dog-img {
+        position: absolute;
+        width: 25%;
+        bottom: 115px;
+        right: 10px;
+        &.disappear {
+            display: none;
+        }
+    }
+    .cat-img {
+        position: absolute;
+        width: 25%;
+        left: 10px;
+        bottom: 115px;
+        &.disappear {
+            display: none;
+        }
+    }
+    .silvery-img {
+        width: 25%;
+        position: absolute;
+        bottom: 120px;
+        left: 10px;
+        &.moveSilvery {
+            animation: moveSilvery .8s linear;
+            left: 180px;
+            &.moveSilveryBack {
+                animation: moveSilveryBack .8s linear;
+                left: 10px;
+            }
+        }
+    }
+    @keyframes moveSilvery {
+        0% {
+            left: 10px;
+        }
+        50% {
+            left: 95px;
+        }
+        100% {
+            left: 180px;
+        }
+    }
+    @keyframes moveSilveryBack {
+        0% {
+            left: 180px;
+        }
+        50% {
+            left: 95px;
+        }
+        100% {
+            left: 10px;
+        }
+    }
+    .lajiaofen-img {
+        position: absolute;
+        width: 20%;
+        bottom: 125px;
+        left: 140px;
+    }
+}

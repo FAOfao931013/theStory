@@ -1,0 +1,54 @@
+@import '../../less/global.less';
+.story-third {
+    position: relative;
+    .dialog-wrap {
+        height: 100%;
+        background-image: url('../../img/cave-1.jpg');
+        background-size: 100% 100%;
+        &.cave_2 {
+            background-image: url('../../img/cave-2.jpg');
+        }
+    }
+    .dog-img {
+        position: absolute;
+        width: 25%;
+        bottom: 115px;
+        right: 10px;
+        &.disappear {
+            display: none;
+        }
+    }
+    .snake-img {
+        width: 55%;
+        position: absolute;
+        bottom: 115px;
+        left: 5px;
+        &.moveSnake {
+            animation: moveSnake .8s linear;
+            left: 65px;
+        }
+    }
+    @keyframes moveSnake {
+        0% {
+            left: 5px;
+        }
+        50% {
+            left: 35px;
+        }
+        100% {
+            left: 65px;
+        }
+    }
+    .magic-img {
+        width: 45%;
+        position: absolute;
+        bottom: 115px;
+        left: 10px;
+    }
+    .lajiaofen-img {
+        position: absolute;
+        width: 20%;
+        left: 175px;
+        top: 245px;
+    }
+}
